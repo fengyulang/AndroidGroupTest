@@ -1,4 +1,4 @@
-package com.cn.fengyu.androidgrouptest;
+package com.ll.fy.ftoast;
 
 import org.junit.Test;
 
