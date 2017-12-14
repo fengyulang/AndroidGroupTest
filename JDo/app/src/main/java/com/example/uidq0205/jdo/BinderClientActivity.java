@@ -17,6 +17,7 @@ import android.widget.TextView;
  */
 
 public class BinderClientActivity extends Activity {
+    private static final String TAG = "BinderClientActivity";
     ProxyService mService;
     private Button cBtn;
     private TextView mStatusPanel;
@@ -32,16 +33,16 @@ public class BinderClientActivity extends Activity {
         cBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("BinderClientActivity", "onClick: null");
+                Log.d(TAG, "onClick: null");
                 if (mService == null) {
                     return;
                 }
-                Log.d("BinderClientActivity", "onClick: ");
+                Log.d(TAG, "onClick: ");
                 mService.print("Tree of liberty must be refreshed from time to time with blood of patroits and tyrants",
                         mStatusPanel);
             }
         });
-        Log.d("BinderClientActivity", "onCreate: ");
+        Log.d(TAG, "onCreate: ");
     }
 
     @Override
@@ -53,7 +54,7 @@ public class BinderClientActivity extends Activity {
     private void doBindService() {
         Intent intent = new Intent(this, BinderPrinterService.class);
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
-        Log.d("BinderClientActivity", "doBindService: ");
+        Log.d(TAG, "doBindService: ");
     }
 
     @Override
@@ -73,7 +74,7 @@ public class BinderClientActivity extends Activity {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             mService = (ProxyService) iBinder;
-            Log.d("BinderClientActivity", "mConnection: ");
+            Log.d(TAG, "mConnection: ");
         }
 
         @Override
