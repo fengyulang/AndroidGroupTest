@@ -13,7 +13,7 @@ import android.widget.Toast;
  */
 
 public class BinderPrinterService extends Service {
-    private static final String TAG = "PlayerService";
+    private static final String TAG = "BinderPrinterService";
     private IBinder mBinder;
 
     @Override
