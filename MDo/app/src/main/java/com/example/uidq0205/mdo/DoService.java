@@ -20,7 +20,9 @@ public class DoService extends Service {
 
     IDoService.Stub mBinder=new IDoService.Stub() {
         @Override
-        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
+        public void basicTypes(int anInt, long aLong, boolean aBoolean,
+                               float aFloat, double aDouble, String aString)
+                throws RemoteException {
             
         }
 

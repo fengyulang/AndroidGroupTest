@@ -19,7 +19,7 @@
         <service android:name=".DoService">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE"/>
+                <action android:name="com.example.uidq0205.mdo.DoService"/>
             </intent-filter>
         </service>
     </application>
